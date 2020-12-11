@@ -1,0 +1,52 @@
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
++-----------------------------------------------------------------------------------+
+; Quartus II QXP Design File                                                        ;
++------------------+----------------------------------------------------------------+
+; Field            ; Value                                                          ;
++------------------+----------------------------------------------------------------+
+; Entity           ; TrainSetSimulator                                              ;
+; Case Sensitive   ;                                                                ;
+; QXP Source       ; TrainSetSimulator.qxp                                          ;
+; Software Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Date             ; Mon Sep 08 23:05:03 2014                                       ;
+; Contents         ; Netlist Only                                                   ;
+; Family           ; EP2C35F672C6                                                   ;
+; Device           ; MG4FBGA672C6                                                   ;
++------------------+----------------------------------------------------------------+
+
++--------------------------------------------------------------------------------------+
+; Boundary Ports                                                                       ;
++------------------+--------+----------------------------------------------------------+
+; Port Name        ; Type   ; Default Value                                            ;
++------------------+--------+----------------------------------------------------------+
+; tc_reset         ; output ; X                                                        ;
+; reset            ; input  ; 1                                                        ;
+; clk_50           ; input  ; 1                                                        ;
+; tc_dirB [1:0]    ; input  ; 11                                                       ;
+; tc_dirA [1:0]    ; input  ; 11                                                       ;
+; tc_switch [4:1]  ; input  ; 1111                                                     ;
+; speedB [3:0]     ; input  ; 1111                                                     ;
+; speedA [3:0]     ; input  ; 1111                                                     ;
+; sram_data [15:0] ; bidir  ; 1111111111111111                                         ;
+; run_stop         ; input  ; 1                                                        ;
+; vga_ctrl [33:0]  ; output ; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                       ;
+; tc_clock         ; output ; X                                                        ;
+; lcd_ctrl [12:0]  ; output ; XXXXXXXXXXXXX                                            ;
+; leds [15:0]      ; output ; XXXXXXXXXXXXXXXX                                         ;
+; sram_ctrl [22:0] ; output ; XXXXXXXXXXXXXXXXXXXXXXX                                  ;
+; sseg_ctrl [55:0] ; output ; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ;
+; tc_sensor [6:1]  ; output ; XXXXXX                                                   ;
++------------------+--------+----------------------------------------------------------+

@@ -1,0 +1,65 @@
+184638978
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+1410213903
+1
+-------------------------------
+Entity/Instance
+TrainSetSimulator:inst4
+Revision
+TrainSim
+Device
+EP2C35F672C6
+Total logic elements
+1092 / 33216 ( 3 % )
+    -- Combinational with no register
+654
+    -- Register only
+188
+    -- Combinational with a register
+250
+
+
+Logic element usage by number of LUT inputs
+
+    -- 4 input functions
+514
+    -- 3 input functions
+241
+    -- <=2 input functions
+149
+    -- Register only
+188
+
+
+Logic elements by mode
+
+    -- normal mode
+790
+    -- arithmetic mode
+114
+
+
+Total registers
+438
+    -- Dedicated logic registers
+438 / 33216 ( 1 % )
+    -- I/O registers
+0
+
+
+Total LABs:  partially or completely used
+71 / 2076 ( 3 % )
+
+
+Virtual pins
+0
+I/O pins
+167
+Embedded Multiplier 9-bit elements
+0 / 70 ( 0 % )
+Total memory bits
+47480
+Total RAM block bits
+0
+PLL
+1 / 4 ( 25 % )

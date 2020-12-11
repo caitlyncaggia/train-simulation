@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Feb 29 16:30:00 2016
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : train
+Top-level Entity Name : TrainTop
+Family : Cyclone II
+Total logic elements : 1,127
+    Total combinational functions : 945
+    Dedicated logic registers : 450
+Total registers : 450
+Total pins : 173
+Total virtual pins : 0
+Total memory bits : 47,480
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

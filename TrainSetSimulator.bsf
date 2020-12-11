@@ -1,0 +1,149 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 64 64 296 304)
+	(text "TrainSetSimulator" (rect 5 0 104 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 224 25 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "tc_switch[4..1]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "tc_switch[4..1]" (rect 21 27 105 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "tc_dirA[1..0]" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "tc_dirA[1..0]" (rect 21 43 90 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "tc_dirB[1..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "tc_dirB[1..0]" (rect 21 59 89 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk_50" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "clk_50" (rect 21 107 57 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "reset" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "reset" (rect 21 123 50 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "run_stop" (rect 0 0 50 14)(font "Arial" (font_size 8)))
+		(text "run_stop" (rect 21 139 71 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "speedA[3..0]" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "speedA[3..0]" (rect 21 155 94 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "speedB[3..0]" (rect 0 0 71 14)(font "Arial" (font_size 8)))
+		(text "speedB[3..0]" (rect 21 171 92 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "tc_reset" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "tc_reset" (rect 164 27 211 41)(font "Arial" (font_size 8)))
+		(line (pt 232 32)(pt 216 32)(line_width 1))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "tc_clock" (rect 0 0 47 14)(font "Arial" (font_size 8)))
+		(text "tc_clock" (rect 164 43 211 57)(font "Arial" (font_size 8)))
+		(line (pt 232 48)(pt 216 48)(line_width 1))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "tc_sensor[6..1]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "tc_sensor[6..1]" (rect 125 59 211 73)(font "Arial" (font_size 8)))
+		(line (pt 232 64)(pt 216 64)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "vga_ctrl[33..0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "vga_ctrl[33..0]" (rect 130 107 211 121)(font "Arial" (font_size 8)))
+		(line (pt 232 112)(pt 216 112)(line_width 3))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "sram_ctrl[22..0]" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "sram_ctrl[22..0]" (rect 123 123 211 137)(font "Arial" (font_size 8)))
+		(line (pt 232 128)(pt 216 128)(line_width 3))
+	)
+	(port
+		(pt 232 160)
+		(output)
+		(text "lcd_ctrl[12..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
+		(text "lcd_ctrl[12..0]" (rect 135 155 211 169)(font "Arial" (font_size 8)))
+		(line (pt 232 160)(pt 216 160)(line_width 3))
+	)
+	(port
+		(pt 232 176)
+		(output)
+		(text "sseg_ctrl[55..0]" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "sseg_ctrl[55..0]" (rect 123 171 211 185)(font "Arial" (font_size 8)))
+		(line (pt 232 176)(pt 216 176)(line_width 3))
+	)
+	(port
+		(pt 232 192)
+		(output)
+		(text "leds[15..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "leds[15..0]" (rect 152 187 211 201)(font "Arial" (font_size 8)))
+		(line (pt 232 192)(pt 216 192)(line_width 3))
+	)
+	(port
+		(pt 232 144)
+		(bidir)
+		(text "sram_data[15..0]" (rect 0 0 95 14)(font "Arial" (font_size 8)))
+		(text "sram_data[15..0]" (rect 116 139 211 153)(font "Arial" (font_size 8)))
+		(line (pt 232 144)(pt 216 144)(line_width 3))
+	)
+	(drawing
+		(line (pt 16 88)(pt 216 88)(line_width 1))
+		(rectangle (rect 16 16 216 216)(line_width 1))
+	)
+)

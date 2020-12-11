@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.521 ns
+From           : PB[1]
+To             : TrainSetSimulator:inst5|SCOMP_TRAIN:inst|AC[2]
+From Clock     : --
+To Clock       : CLK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.783 ns
+From           : TrainSetSimulator:inst5|QUAD_HEX:inst19|HEX_DISP:inst15|latched_hex[3]
+To             : sseg_ctrl[28]
+From Clock     : CLK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.111 ns
+From           : sram_data[1]
+To             : vga_ctrl[25]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.735 ns
+From           : SLIDESW[6]
+To             : TrainSetSimulator:inst5|DIG_IN:inst38|B_DI[6]
+From Clock     : --
+To Clock       : CLK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0'
+Slack          : -4.770 ns
+Required Time  : 150.02 MHz ( period = 6.666 ns )
+Actual Time    : N/A
+From           : TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst8|lpm_ff:lpm_ff_component|dffs[0]
+To             : TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst1|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1
+To Clock       : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0
+Failed Paths   : 1
+
+Type           : Clock Setup: 'TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1'
+Slack          : 4.570 ns
+Required Time  : 40.00 MHz ( period = 25.000 ns )
+Actual Time    : 63.05 MHz ( period = 15.860 ns )
+From           : TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:MEMORY|altsyncram_frt3:auto_generated|ram_block1a0~porta_address_reg10
+To             : TrainSetSimulator:inst5|SCOMP_TRAIN:inst|AC[0]
+From Clock     : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1
+To Clock       : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1'
+Slack          : -5.350 ns
+Required Time  : 40.00 MHz ( period = 25.000 ns )
+Actual Time    : N/A
+From           : TrainSetSimulator:inst5|SCOMP_TRAIN:inst|IO_DATA_O[9]
+To             : TrainSetSimulator:inst5|QUAD_HEX:inst18|HEX_DISP:inst21|latched_hex[1]
+From Clock     : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1
+To Clock       : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk1
+Failed Paths   : 134
+
+Type           : Clock Hold: 'TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0'
+Slack          : 0.529 ns
+Required Time  : 150.02 MHz ( period = 6.666 ns )
+Actual Time    : N/A
+From           : TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_chain:inst2|lpm_ff:lpm_ff_component|dffs[0]
+To             : TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_chain:inst2|lpm_ff:lpm_ff_component|dffs[1]
+From Clock     : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0
+To Clock       : TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 135
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,571 @@
+Analysis & Synthesis report for train
+Mon Feb 29 16:30:00 2016
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |TrainTop|Tcontrol:inst|state
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for TrainSetSimulator:inst5
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Feb 29 16:30:00 2016        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; train                                        ;
+; Top-level Entity Name              ; TrainTop                                     ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 1,127                                        ;
+;     Total combinational functions  ; 945                                          ;
+;     Dedicated logic registers      ; 450                                          ;
+; Total registers                    ; 450                                          ;
+; Total pins                         ; 173                                          ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 47,480                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 1                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; TrainTop           ; train              ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++-----------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+; File Name with User-Entered Path                                ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                    ;
++-----------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+; TrainTop.bdf                                                    ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Caitlyn/Documents/train/TrainTop.bdf                   ;
+; tcontrol.vhd                                                    ; yes             ; User VHDL File                         ; C:/Users/Caitlyn/Documents/train/tcontrol.vhd                   ;
+; altpll0.vhd                                                     ; yes             ; User Wizard-Generated File             ; altpll0.vhd                                                     ;
+; DIG_IN.vhd                                                      ; yes             ; User VHDL File                         ; DIG_IN.vhd                                                      ;
+; DIG_OUT.vhd                                                     ; yes             ; User VHDL File                         ; DIG_OUT.vhd                                                     ;
+; HEX_DISP.vhd                                                    ; yes             ; User VHDL File                         ; HEX_DISP.vhd                                                    ;
+; LCD_Display.vhd                                                 ; yes             ; User VHDL File                         ; LCD_Display.vhd                                                 ;
+; lpm_add_addr.vhd                                                ; yes             ; User Wizard-Generated File             ; lpm_add_addr.vhd                                                ;
+; lpm_decode_io.vhd                                               ; yes             ; User Wizard-Generated File             ; lpm_decode_io.vhd                                               ;
+; lpm_dff_chain.vhd                                               ; yes             ; User Wizard-Generated File             ; lpm_dff_chain.vhd                                               ;
+; lpm_dff_data.vhd                                                ; yes             ; User Wizard-Generated File             ; lpm_dff_data.vhd                                                ;
+; lpm_dff_simp.vhd                                                ; yes             ; User Wizard-Generated File             ; lpm_dff_simp.vhd                                                ;
+; lpm_dff_wen.vhd                                                 ; yes             ; User Wizard-Generated File             ; lpm_dff_wen.vhd                                                 ;
+; lpm_mux_18.vhd                                                  ; yes             ; User Wizard-Generated File             ; lpm_mux_18.vhd                                                  ;
+; Pix2MemAddr.bdf                                                 ; yes             ; User Block Diagram/Schematic File      ; Pix2MemAddr.bdf                                                 ;
+; QUAD_HEX.bdf                                                    ; yes             ; User Block Diagram/Schematic File      ; QUAD_HEX.bdf                                                    ;
+; SCOMP_TRAIN.vhd                                                 ; yes             ; User VHDL File                         ; SCOMP_TRAIN.vhd                                                 ;
+; SRAM_CTLR_DFFC.bdf                                              ; yes             ; User Block Diagram/Schematic File      ; SRAM_CTLR_DFFC.bdf                                              ;
+; TrainSetSimulator.bdf                                           ; yes             ; User Block Diagram/Schematic File      ; TrainSetSimulator.bdf                                           ;
+; VGA_SYNC.vhd                                                    ; yes             ; User VHDL File                         ; VGA_SYNC.vhd                                                    ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/altpll.tdf      ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altpll.tdf      ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf  ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf  ;
+; db/altsyncram_frt3.tdf                                          ; yes             ; Auto-Generated Megafunction            ; db/altsyncram_frt3.tdf                                          ;
+; simulatorcode.mif                                               ; yes             ; Auto-Found Memory Initialization File  ; simulatorcode.mif                                               ;
+; db/altsyncram_agr3.tdf                                          ; yes             ; Auto-Generated Megafunction            ; db/altsyncram_agr3.tdf                                          ;
+; tracklayout.mif                                                 ; yes             ; Auto-Found Memory Initialization File  ; tracklayout.mif                                                 ;
+; db/altsyncram_n2r3.tdf                                          ; yes             ; Auto-Generated Megafunction            ; db/altsyncram_n2r3.tdf                                          ;
+; sprites.mif                                                     ; yes             ; Auto-Found Memory Initialization File  ; sprites.mif                                                     ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_clshift.tdf ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_clshift.tdf ;
+; db/lpm_clshift_fuc.tdf                                          ; yes             ; Auto-Generated Megafunction            ; db/lpm_clshift_fuc.tdf                                          ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf  ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf  ;
+; db/decode_duf.tdf                                               ; yes             ; Auto-Generated Megafunction            ; db/decode_duf.tdf                                               ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ff.tdf      ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ff.tdf      ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mux.tdf     ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mux.tdf     ;
+; db/mux_o4e.tdf                                                  ; yes             ; Auto-Generated Megafunction            ; db/mux_o4e.tdf                                                  ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/busmux.tdf      ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/busmux.tdf      ;
+; db/mux_doc.tdf                                                  ; yes             ; Auto-Generated Megafunction            ; db/mux_doc.tdf                                                  ;
+; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf ;
+; db/add_sub_ulh.tdf                                              ; yes             ; Auto-Generated Megafunction            ; db/add_sub_ulh.tdf                                              ;
+; db/mux_smc.tdf                                                  ; yes             ; Auto-Generated Megafunction            ; db/mux_smc.tdf                                                  ;
++-----------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                       ;
++---------------------------------------------+---------------------------------------------------------------------+
+; Resource                                    ; Usage                                                               ;
++---------------------------------------------+---------------------------------------------------------------------+
+; Estimated Total logic elements              ; 1,127                                                               ;
+;                                             ;                                                                     ;
+; Total combinational functions               ; 945                                                                 ;
+; Logic element usage by number of LUT inputs ;                                                                     ;
+;     -- 4 input functions                    ; 542                                                                 ;
+;     -- 3 input functions                    ; 247                                                                 ;
+;     -- <=2 input functions                  ; 156                                                                 ;
+;                                             ;                                                                     ;
+; Logic elements by mode                      ;                                                                     ;
+;     -- normal mode                          ; 831                                                                 ;
+;     -- arithmetic mode                      ; 114                                                                 ;
+;                                             ;                                                                     ;
+; Total registers                             ; 450                                                                 ;
+;     -- Dedicated logic registers            ; 450                                                                 ;
+;     -- I/O registers                        ; 0                                                                   ;
+;                                             ;                                                                     ;
+; I/O pins                                    ; 173                                                                 ;
+; Total memory bits                           ; 47480                                                               ;
+; Total PLLs                                  ; 1                                                                   ;
+; Maximum fan-out node                        ; TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component|_clk0 ;
+; Maximum fan-out                             ; 393                                                                 ;
+; Total fan-out                               ; 5200                                                                ;
+; Average fan-out                             ; 3.24                                                                ;
++---------------------------------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |TrainTop                                       ; 945 (0)           ; 450 (0)      ; 47480       ; 0            ; 0       ; 0         ; 173  ; 0            ; |TrainTop                                                                                                                           ; work         ;
+;    |Tcontrol:inst|                              ; 41 (41)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|Tcontrol:inst                                                                                                             ;              ;
+;    |TrainSetSimulator:inst5|                    ; 904 (12)          ; 438 (0)      ; 47480       ; 0            ; 0       ; 0         ; 167  ; 0            ; |TrainTop|TrainSetSimulator:inst5                                                                                                   ;              ;
+;       |DIG_IN:inst27|                           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|DIG_IN:inst27                                                                                     ;              ;
+;       |DIG_IN:inst38|                           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|DIG_IN:inst38                                                                                     ;              ;
+;       |DIG_OUT:inst26|                          ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|DIG_OUT:inst26                                                                                    ;              ;
+;       |DIG_OUT:inst39|                          ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|DIG_OUT:inst39                                                                                    ;              ;
+;       |DIG_OUT:inst41|                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|DIG_OUT:inst41                                                                                    ;              ;
+;       |LCD_Display:inst6|                       ; 115 (115)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|LCD_Display:inst6                                                                                 ;              ;
+;       |Pix2MemAddr:inst7|                       ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7                                                                                 ;              ;
+;          |lpm_add_addr:inst3|                   ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst3                                                              ;              ;
+;             |lpm_add_sub:lpm_add_sub_component| ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst3|lpm_add_sub:lpm_add_sub_component                            ;              ;
+;                |add_sub_ulh:auto_generated|     ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst3|lpm_add_sub:lpm_add_sub_component|add_sub_ulh:auto_generated ;              ;
+;          |lpm_add_addr:inst|                    ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst                                                               ;              ;
+;             |lpm_add_sub:lpm_add_sub_component| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst|lpm_add_sub:lpm_add_sub_component                             ;              ;
+;                |add_sub_ulh:auto_generated|     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst7|lpm_add_addr:inst|lpm_add_sub:lpm_add_sub_component|add_sub_ulh:auto_generated  ;              ;
+;       |Pix2MemAddr:inst8|                       ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8                                                                                 ;              ;
+;          |lpm_add_addr:inst3|                   ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst3                                                              ;              ;
+;             |lpm_add_sub:lpm_add_sub_component| ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst3|lpm_add_sub:lpm_add_sub_component                            ;              ;
+;                |add_sub_ulh:auto_generated|     ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst3|lpm_add_sub:lpm_add_sub_component|add_sub_ulh:auto_generated ;              ;
+;          |lpm_add_addr:inst|                    ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst                                                               ;              ;
+;             |lpm_add_sub:lpm_add_sub_component| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst|lpm_add_sub:lpm_add_sub_component                             ;              ;
+;                |add_sub_ulh:auto_generated|     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|Pix2MemAddr:inst8|lpm_add_addr:inst|lpm_add_sub:lpm_add_sub_component|add_sub_ulh:auto_generated  ;              ;
+;       |QUAD_HEX:inst18|                         ; 28 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst18                                                                                   ;              ;
+;          |HEX_DISP:inst15|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst18|HEX_DISP:inst15                                                                   ;              ;
+;          |HEX_DISP:inst21|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst18|HEX_DISP:inst21                                                                   ;              ;
+;          |HEX_DISP:inst22|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst18|HEX_DISP:inst22                                                                   ;              ;
+;          |HEX_DISP:inst27|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst18|HEX_DISP:inst27                                                                   ;              ;
+;       |QUAD_HEX:inst19|                         ; 28 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst19                                                                                   ;              ;
+;          |HEX_DISP:inst15|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst19|HEX_DISP:inst15                                                                   ;              ;
+;          |HEX_DISP:inst21|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst19|HEX_DISP:inst21                                                                   ;              ;
+;          |HEX_DISP:inst22|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst19|HEX_DISP:inst22                                                                   ;              ;
+;          |HEX_DISP:inst27|                      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|QUAD_HEX:inst19|HEX_DISP:inst27                                                                   ;              ;
+;       |SCOMP_TRAIN:inst|                        ; 602 (481)         ; 236 (236)    ; 47480       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst                                                                                  ;              ;
+;          |altsyncram:LAYOUT|                    ; 0 (0)             ; 0 (0)        ; 5112        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:LAYOUT                                                                ;              ;
+;             |altsyncram_agr3:auto_generated|    ; 0 (0)             ; 0 (0)        ; 5112        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:LAYOUT|altsyncram_agr3:auto_generated                                 ;              ;
+;          |altsyncram:MEMORY|                    ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:MEMORY                                                                ;              ;
+;             |altsyncram_frt3:auto_generated|    ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:MEMORY|altsyncram_frt3:auto_generated                                 ;              ;
+;          |altsyncram:SPRITES|                   ; 0 (0)             ; 0 (0)        ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:SPRITES                                                               ;              ;
+;             |altsyncram_n2r3:auto_generated|    ; 0 (0)             ; 0 (0)        ; 9600        ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:SPRITES|altsyncram_n2r3:auto_generated                                ;              ;
+;          |lpm_clshift:SHIFTER|                  ; 121 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|lpm_clshift:SHIFTER                                                              ;              ;
+;             |lpm_clshift_fuc:auto_generated|    ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SCOMP_TRAIN:inst|lpm_clshift:SHIFTER|lpm_clshift_fuc:auto_generated                               ;              ;
+;       |SRAM_CTLR_DFFC:inst4|                    ; 10 (3)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4                                                                              ;              ;
+;          |lpm_dff_chain:inst2|                  ; 0 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_chain:inst2                                                          ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_chain:inst2|lpm_ff:lpm_ff_component                                  ;              ;
+;          |lpm_dff_data:inst22|                  ; 0 (0)             ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_data:inst22                                                          ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_data:inst22|lpm_ff:lpm_ff_component                                  ;              ;
+;          |lpm_dff_simp:inst1|                   ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst1                                                           ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst1|lpm_ff:lpm_ff_component                                   ;              ;
+;          |lpm_dff_simp:inst8|                   ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst8                                                           ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_simp:inst8|lpm_ff:lpm_ff_component                                   ;              ;
+;          |lpm_dff_wen:inst12|                   ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst12                                                           ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst12|lpm_ff:lpm_ff_component                                   ;              ;
+;          |lpm_dff_wen:inst14|                   ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst14                                                           ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst14|lpm_ff:lpm_ff_component                                   ;              ;
+;          |lpm_dff_wen:inst23|                   ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst23                                                           ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst23|lpm_ff:lpm_ff_component                                   ;              ;
+;          |lpm_dff_wen:inst3|                    ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst3                                                            ;              ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_dff_wen:inst3|lpm_ff:lpm_ff_component                                    ;              ;
+;          |lpm_mux_18:inst25|                    ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_mux_18:inst25                                                            ;              ;
+;             |lpm_mux:lpm_mux_component|         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_mux_18:inst25|lpm_mux:lpm_mux_component                                  ;              ;
+;                |mux_o4e:auto_generated|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|SRAM_CTLR_DFFC:inst4|lpm_mux_18:inst25|lpm_mux:lpm_mux_component|mux_o4e:auto_generated           ;              ;
+;       |VGA_SYNC:inst3|                          ; 43 (43)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|VGA_SYNC:inst3                                                                                    ;              ;
+;       |altpll0:inst5|                           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|altpll0:inst5                                                                                     ;              ;
+;          |altpll:altpll_component|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|altpll0:inst5|altpll:altpll_component                                                             ;              ;
+;       |busmux:inst9|                            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|busmux:inst9                                                                                      ;              ;
+;          |lpm_mux:$00000|                       ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|busmux:inst9|lpm_mux:$00000                                                                       ;              ;
+;             |mux_smc:auto_generated|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|busmux:inst9|lpm_mux:$00000|mux_smc:auto_generated                                                ;              ;
+;       |lpm_decode_io:inst17|                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|lpm_decode_io:inst17                                                                              ;              ;
+;          |lpm_decode:lpm_decode_component|      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|lpm_decode_io:inst17|lpm_decode:lpm_decode_component                                              ;              ;
+;             |decode_duf:auto_generated|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TrainTop|TrainSetSimulator:inst5|lpm_decode_io:inst17|lpm_decode:lpm_decode_component|decode_duf:auto_generated                    ;              ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                   ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
+; Name                                                                                                  ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF               ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
+; TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:LAYOUT|altsyncram_agr3:auto_generated|ALTSYNCRAM  ; AUTO ; ROM         ; 1278         ; 4            ; --           ; --           ; 5112  ; TrackLayout.mif   ;
+; TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:MEMORY|altsyncram_frt3:auto_generated|ALTSYNCRAM  ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; SimulatorCode.mif ;
+; TrainSetSimulator:inst5|SCOMP_TRAIN:inst|altsyncram:SPRITES|altsyncram_n2r3:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 600          ; 16           ; --           ; --           ; 9600  ; Sprites.mif       ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+-------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TrainTop|Tcontrol:inst|state                                                                                                                                        ;
++--------------+-------------+--------------+--------------+-------------+--------------+------------+-------------+------------+-------------+------------+-------------+-------------+
+; Name         ; state.A1XB2 ; state.A1XB2X ; state.A1XB3X ; state.A4XB2 ; state.A4XB2X ; state.A4B2 ; state.A4B2X ; state.A2BS ; state.A2B3X ; state.A1B2 ; state.A1B2X ; state.A1B3X ;
++--------------+-------------+--------------+--------------+-------------+--------------+------------+-------------+------------+-------------+------------+-------------+-------------+
+; state.A1B3X  ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 0           ;
+; state.A1B2X  ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 1           ; 1           ;
+; state.A1B2   ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 1          ; 0           ; 1           ;
+; state.A2B3X  ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 1           ; 0          ; 0           ; 1           ;
+; state.A2BS   ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 1          ; 0           ; 0          ; 0           ; 1           ;
+; state.A4B2X  ; 0           ; 0            ; 0            ; 0           ; 0            ; 0          ; 1           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A4B2   ; 0           ; 0            ; 0            ; 0           ; 0            ; 1          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A4XB2X ; 0           ; 0            ; 0            ; 0           ; 1            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A4XB2  ; 0           ; 0            ; 0            ; 1           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A1XB3X ; 0           ; 0            ; 1            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A1XB2X ; 0           ; 1            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
+; state.A1XB2  ; 1           ; 0            ; 0            ; 0           ; 0            ; 0          ; 0           ; 0          ; 0           ; 0          ; 0           ; 1           ;
++--------------+-------------+--------------+--------------+-------------+--------------+------------+-------------+------------+-------------+------------+-------------+-------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 450   ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 25    ;
+; Number of registers using Asynchronous Clear ; 119   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 269   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Inverted Register Statistics                                          ;
++-------------------------------------------------------------+---------+
+; Inverted Register                                           ; Fan out ;
++-------------------------------------------------------------+---------+
+; TrainSetSimulator:inst5|LCD_Display:inst6|LCD_E             ; 2       ;
+; TrainSetSimulator:inst5|LCD_Display:inst6|LCD_RW_INT        ; 9       ;
+; TrainSetSimulator:inst5|LCD_Display:inst6|DATA_BUS_VALUE[5] ; 1       ;
+; TrainSetSimulator:inst5|LCD_Display:inst6|DATA_BUS_VALUE[4] ; 1       ;
+; TrainSetSimulator:inst5|LCD_Display:inst6|DATA_BUS_VALUE[3] ; 2       ;
+; Total number of inverted registers = 5                      ;         ;
++-------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------+
+; Source assignments for TrainSetSimulator:inst5                                          ;
++--------------------------------------------------------+--------------------+------+----+
+; Assignment                                             ; Value              ; From ; To ;
++--------------------------------------------------------+--------------------+------+----+
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP                    ; OFF                ;      ;    ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH                  ; 2                  ;      ;    ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS                        ; NORMAL COMPILATION ;      ;    ;
+; ADCE_ENABLED                                           ; AUTO               ;      ;    ;
+; BLOCK_RAM_TO_MLAB_CELL_CONVERSION                      ; ON                 ;      ;    ;
+; BLOCK_RAM_AND_MLAB_EQUIVALENT_POWER_UP_CONDITIONS      ; AUTO               ;      ;    ;
+; BLOCK_RAM_AND_MLAB_EQUIVALENT_PAUSED_READ_CAPABILITIES ; CARE               ;      ;    ;
+; OPTIMIZE_POWER_DURING_FITTING                          ; NORMAL COMPILATION ;      ;    ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA                ; OFF                ;      ;    ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                         ; OFF                ;      ;    ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION                ; OFF                ;      ;    ;
+; PHYSICAL_SYNTHESIS_MAP_LOGIC_TO_MEMORY_FOR_AREA        ; OFF                ;      ;    ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING                   ; OFF                ;      ;    ;
+; PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING      ; OFF                ;      ;    ;
+; ENABLE_BENEFICIAL_SKEW_OPTIMIZATION                    ; ON                 ;      ;    ;
+; AUTO_C3_M9K_BIT_SKIP                                   ; OFF                ;      ;    ;
+; POWER_REPORT_SIGNAL_ACTIVITY                           ; OFF                ;      ;    ;
+; POWER_REPORT_POWER_DISSIPATION                         ; OFF                ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_PIN_LOAD                                        ; 1                  ;      ;    ;
+; OUTPUT_IO_TIMING_ENDPOINT                              ; NEAR END           ;      ;    ;
+; MUX_RESTRUCTURE                                        ; AUTO               ;      ;    ;
+; STATE_MACHINE_PROCESSING                               ; AUTO               ;      ;    ;
+; SAFE_STATE_MACHINE                                     ; OFF                ;      ;    ;
+; IGNORE_VERILOG_INITIAL_CONSTRUCTS                      ; OFF                ;      ;    ;
+; VERILOG_CONSTANT_LOOP_LIMIT                            ; 5000               ;      ;    ;
+; VERILOG_NON_CONSTANT_LOOP_LIMIT                        ; 250                ;      ;    ;
+; ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS                ; ON                 ;      ;    ;
+; DSP_BLOCK_BALANCING                                    ; AUTO               ;      ;    ;
+; NOT_GATE_PUSH_BACK                                     ; ON                 ;      ;    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS                           ; OFF                ;      ;    ;
+; REMOVE_DUPLICATE_REGISTERS                             ; ON                 ;      ;    ;
+; IGNORE_CARRY_BUFFERS                                   ; OFF                ;      ;    ;
+; IGNORE_CASCADE_BUFFERS                                 ; OFF                ;      ;    ;
+; IGNORE_GLOBAL_BUFFERS                                  ; OFF                ;      ;    ;
+; IGNORE_ROW_GLOBAL_BUFFERS                              ; OFF                ;      ;    ;
+; IGNORE_LCELL_BUFFERS                                   ; OFF                ;      ;    ;
+; MAX7000_IGNORE_LCELL_BUFFERS                           ; AUTO               ;      ;    ;
+; IGNORE_SOFT_BUFFERS                                    ; ON                 ;      ;    ;
+; MAX7000_IGNORE_SOFT_BUFFERS                            ; OFF                ;      ;    ;
+; AUTO_GLOBAL_CLOCK_MAX                                  ; ON                 ;      ;    ;
+; AUTO_GLOBAL_OE_MAX                                     ; ON                 ;      ;    ;
+; MAX_AUTO_GLOBAL_REGISTER_CONTROLS                      ; ON                 ;      ;    ;
+; AUTO_IMPLEMENT_IN_ROM                                  ; OFF                ;      ;    ;
+; APEX20K_TECHNOLOGY_MAPPER                              ; LUT                ;      ;    ;
+; OPTIMIZATION_TECHNIQUE                                 ; BALANCED           ;      ;    ;
+; STRATIXII_OPTIMIZATION_TECHNIQUE                       ; BALANCED           ;      ;    ;
+; CYCLONE_OPTIMIZATION_TECHNIQUE                         ; BALANCED           ;      ;    ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE                       ; BALANCED           ;      ;    ;
+; STRATIX_OPTIMIZATION_TECHNIQUE                         ; BALANCED           ;      ;    ;
+; MAXII_OPTIMIZATION_TECHNIQUE                           ; BALANCED           ;      ;    ;
+; MAX7000_OPTIMIZATION_TECHNIQUE                         ; SPEED              ;      ;    ;
+; APEX20K_OPTIMIZATION_TECHNIQUE                         ; BALANCED           ;      ;    ;
+; MERCURY_OPTIMIZATION_TECHNIQUE                         ; AREA               ;      ;    ;
+; FLEX6K_OPTIMIZATION_TECHNIQUE                          ; AREA               ;      ;    ;
+; FLEX10K_OPTIMIZATION_TECHNIQUE                         ; AREA               ;      ;    ;
+; ALLOW_XOR_GATE_USAGE                                   ; ON                 ;      ;    ;
+; AUTO_LCELL_INSERTION                                   ; ON                 ;      ;    ;
+; CARRY_CHAIN_LENGTH                                     ; 48                 ;      ;    ;
+; FLEX6K_CARRY_CHAIN_LENGTH                              ; 32                 ;      ;    ;
+; FLEX10K_CARRY_CHAIN_LENGTH                             ; 32                 ;      ;    ;
+; MERCURY_CARRY_CHAIN_LENGTH                             ; 48                 ;      ;    ;
+; STRATIX_CARRY_CHAIN_LENGTH                             ; 70                 ;      ;    ;
+; STRATIXII_CARRY_CHAIN_LENGTH                           ; 70                 ;      ;    ;
+; CASCADE_CHAIN_LENGTH                                   ; 2                  ;      ;    ;
+; PARALLEL_EXPANDER_CHAIN_LENGTH                         ; 16                 ;      ;    ;
+; MAX7000_PARALLEL_EXPANDER_CHAIN_LENGTH                 ; 4                  ;      ;    ;
+; AUTO_CARRY_CHAINS                                      ; ON                 ;      ;    ;
+; AUTO_CASCADE_CHAINS                                    ; ON                 ;      ;    ;
+; AUTO_PARALLEL_EXPANDERS                                ; ON                 ;      ;    ;
+; AUTO_OPEN_DRAIN_PINS                                   ; ON                 ;      ;    ;
+; AUTO_ROM_RECOGNITION                                   ; ON                 ;      ;    ;
+; AUTO_RAM_RECOGNITION                                   ; ON                 ;      ;    ;
+; AUTO_DSP_RECOGNITION                                   ; ON                 ;      ;    ;
+; AUTO_SHIFT_REGISTER_RECOGNITION                        ; AUTO               ;      ;    ;
+; AUTO_CLOCK_ENABLE_RECOGNITION                          ; ON                 ;      ;    ;
+; STRICT_RAM_RECOGNITION                                 ; OFF                ;      ;    ;
+; ALLOW_SYNCH_CTRL_USAGE                                 ; ON                 ;      ;    ;
+; FORCE_SYNCH_CLEAR                                      ; OFF                ;      ;    ;
+; AUTO_RAM_TO_LCELL_CONVERSION                           ; OFF                ;      ;    ;
+; AUTO_RESOURCE_SHARING                                  ; OFF                ;      ;    ;
+; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION                     ; OFF                ;      ;    ;
+; ALLOW_ANY_ROM_SIZE_FOR_RECOGNITION                     ; OFF                ;      ;    ;
+; ALLOW_ANY_SHIFT_REGISTER_SIZE_FOR_RECOGNITION          ; OFF                ;      ;    ;
+; MAX7000_FANIN_PER_CELL                                 ; 100                ;      ;    ;
+; SYNTH_TIMING_DRIVEN_SYNTHESIS                          ; OFF                ;      ;    ;
+; IGNORE_MAX_FANOUT_ASSIGNMENTS                          ; OFF                ;      ;    ;
+; USE_HIGH_SPEED_ADDER                                   ; AUTO               ;      ;    ;
+; SYNTH_GATED_CLOCK_CONVERSION                           ; OFF                ;      ;    ;
+; BLOCK_DESIGN_NAMING                                    ; AUTO               ;      ;    ;
+; SHIFT_REGISTER_RECOGNITION_ACLR_SIGNAL                 ; ON                 ;      ;    ;
+; SLOW_SLEW_RATE                                         ; OFF                ;      ;    ;
+; PCI_IO                                                 ; OFF                ;      ;    ;
+; TURBO_BIT                                              ; ON                 ;      ;    ;
+; WEAK_PULL_UP_RESISTOR                                  ; OFF                ;      ;    ;
+; ENABLE_BUS_HOLD_CIRCUITRY                              ; OFF                ;      ;    ;
+; AUTO_GLOBAL_MEMORY_CONTROLS                            ; OFF                ;      ;    ;
+; AUTO_PACKED_REGISTERS_STRATIXII                        ; AUTO               ;      ;    ;
+; AUTO_PACKED_REGISTERS_MAXII                            ; AUTO               ;      ;    ;
+; AUTO_PACKED_REGISTERS_CYCLONE                          ; AUTO               ;      ;    ;
+; AUTO_PACKED_REGISTERS                                  ; OFF                ;      ;    ;
+; AUTO_PACKED_REGISTERS_STRATIX                          ; AUTO               ;      ;    ;
+; NORMAL_LCELL_INSERT                                    ; ON                 ;      ;    ;
+; CARRY_OUT_PINS_LCELL_INSERT                            ; ON                 ;      ;    ;
+; XSTL_INPUT_ALLOW_SE_BUFFER                             ; OFF                ;      ;    ;
+; TREAT_BIDIR_AS_OUTPUT                                  ; OFF                ;      ;    ;
+; AUTO_MERGE_PLLS                                        ; ON                 ;      ;    ;
+; IGNORE_MODE_FOR_MERGE                                  ; OFF                ;      ;    ;
+; AUTO_TURBO_BIT                                         ; ON                 ;      ;    ;
+; AUTO_GLOBAL_CLOCK                                      ; ON                 ;      ;    ;
+; AUTO_GLOBAL_OE                                         ; ON                 ;      ;    ;
+; AUTO_GLOBAL_REGISTER_CONTROLS                          ; ON                 ;      ;    ;
+; SYNCHRONIZER_IDENTIFICATION                            ; OFF                ;      ;    ;
+; M144K_BLOCK_READ_CLOCK_DUTY_CYCLE_DEPENDENCY           ; OFF                ;      ;    ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS                        ; NORMAL_COMPILATION ;      ;    ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS                        ; NORMAL_COMPILATION ;      ;    ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS                        ; NORMAL_COMPILATION ;      ;    ;
++--------------------------------------------------------+--------------------+------+----+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Feb 29 16:29:58 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off train -c train
+Info: Found 1 design units, including 1 entities, in source file traintop.bdf
+    Info: Found entity 1: TrainTop
+Info: Found 2 design units, including 1 entities, in source file tcontrol.vhd
+    Info: Found design unit 1: Tcontrol-a
+    Info: Found entity 1: Tcontrol
+Info: Found 1 design units, including 1 entities, in source file trainsetsimulator.qxp
+    Info: Found entity 1: TrainSetSimulator
+Info: Elaborating entity "TrainTop" for the top level hierarchy
+Info: Elaborating entity "TrainSetSimulator" for hierarchy "TrainSetSimulator:inst5"
+Info: Elaborating entity "Tcontrol" for hierarchy "Tcontrol:inst"
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+    Warning: Node "sram_data~synth"
+Info: Implemented 1345 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 146 output pins
+    Info: Implemented 16 bidirectional pins
+    Info: Implemented 1135 logic cells
+    Info: Implemented 36 RAM segments
+    Info: Implemented 1 PLLs
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 261 megabytes
+    Info: Processing ended: Mon Feb 29 16:30:00 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

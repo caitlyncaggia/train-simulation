@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Feb 29 16:30:11 2016
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : train
+Top-level Entity Name : TrainTop
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 1,079 / 33,216 ( 3 % )
+    Total combinational functions : 952 / 33,216 ( 3 % )
+    Dedicated logic registers : 450 / 33,216 ( 1 % )
+Total registers : 450
+Total pins : 173 / 475 ( 36 % )
+Total virtual pins : 0
+Total memory bits : 47,480 / 483,840 ( 10 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

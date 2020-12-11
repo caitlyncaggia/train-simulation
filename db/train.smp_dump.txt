@@ -1,0 +1,15 @@
+
+State Machine - |TrainTop|Tcontrol:inst|state
+Name state.A1XB2 state.A1XB2X state.A1XB3X state.A4XB2 state.A4XB2X state.A4B2 state.A4B2X state.A2BS state.A2B3X state.A1B2 state.A1B2X state.A1B3X 
+state.A1B3X 0 0 0 0 0 0 0 0 0 0 0 0 
+state.A1B2X 0 0 0 0 0 0 0 0 0 0 1 1 
+state.A1B2 0 0 0 0 0 0 0 0 0 1 0 1 
+state.A2B3X 0 0 0 0 0 0 0 0 1 0 0 1 
+state.A2BS 0 0 0 0 0 0 0 1 0 0 0 1 
+state.A4B2X 0 0 0 0 0 0 1 0 0 0 0 1 
+state.A4B2 0 0 0 0 0 1 0 0 0 0 0 1 
+state.A4XB2X 0 0 0 0 1 0 0 0 0 0 0 1 
+state.A4XB2 0 0 0 1 0 0 0 0 0 0 0 1 
+state.A1XB3X 0 0 1 0 0 0 0 0 0 0 0 1 
+state.A1XB2X 0 1 0 0 0 0 0 0 0 0 0 1 
+state.A1XB2 1 0 0 0 0 0 0 0 0 0 0 1 
